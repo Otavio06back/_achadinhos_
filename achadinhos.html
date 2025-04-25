@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Achadinhos Imperdíveis</title>
+  <link rel="stylesheet" href="achadinhos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    .search-section {
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    #search-input {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    main.container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .sidebar {
+      min-width: 200px;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border-radius: 10px;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+
+    .category-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #eee;
+      border: none;
+      border-radius: 5px;
+      text-align: left;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .category-btn:hover {
+      background-color: #ccc;
+    }
+
+    .content-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      flex: 1;
+    }
+
+    .content-card {
+      width: calc(33.33% - 20px);
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .content-card img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .btn {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+      main.container {
+        flex-direction: column;
+      }
+      .content-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="achadinhos.html">Achadinhos Imperdíveis</a></h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <aside class="sidebar">
+      <h2>Categorias</h2>
+      <ul>
+        <li><button class="category-btn" data-category="todos">Todos</button></li>
+        <li><button class="category-btn" data-category="utilidades">Utilidades</button></li>
+        <li><button class="category-btn" data-category="eletronicos">Eletrônicos</button></li>
+        <li><button class="category-btn" data-category="acessorios-femininos">Acess. Feminino</button></li>
+        <li><button class="category-btn" data-category="decoracao">Decoração</button></li>
+        <li><button class="category-btn" data-category="calcados">Calçados</button></li>
+        <li><button class="category-btn" data-category="utilidade-casa">Utilidade Casa</button></li>
+        <li><button class="category-btn" data-category="perfumaria">Perfumaria</button></li>
+        <li><button class="category-btn" data-category="art-masculino">Art. Masculino</button></li>
+        <li><button class="category-btn" data-category="cobertores">Cobertores</button></li>
+        <li><button class="category-btn" data-category="cosmeticos">Cosméticos</button></li>
+        <li><button class="category-btn" data-category="escolar">Escolar</button></li>
+        <li><button class="category-btn" data-category="roupas-femininas">Roupas Femininas</button></li>
+        <li><button class="category-btn" data-category="pecas-intimas-femininas">Peças Íntimas Femininas</button></li>
+        <li><button class="category-btn" data-category="salao-de-beleza">Salão de Beleza</button></li>
+        <li><button class="category-btn" data-category="moveis">Moveis</button></li>
+      </ul>
+    </aside>
+
+    <div style="flex: 1;">
+      <section class="search-section">
+        <h2>Buscar Achadinho</h2>
+        <input type="text" id="search-input" placeholder="Digite um produto..." />
+      </section>
+
+      <section class="content-grid">
+        <!-- PRODUTOS -->
+        <article class="content-card" data-category="utilidades">
+          <img src="organizador.jpg" alt="Organizador" />
+          <h3>Organizador Multiuso</h3>
+          <p>Organizador dobrável de roupas com divisórias, ideal para gavetas.</p>
+          <a href="https://shopee.com.br/product/984845442/23792648370?uls_trackid=52i018er00v8&utm_campaign=id_WmagK5JAP8&utm_content=----&utm_medium=affiliates&utm_source=an_18375990604&utm_term=cwqqvxmjj8o9"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="utilidades">
+          <img src="escova.jpg" alt="Escova" />
+          <h3>Escova De Limpeza Elétrica</h3>
+          <p>5 Em 1 Purificador De Energia Mágica Para Cozinha , Banheiro.</p>
+          <a href="https://s.shopee.com.br/7pfyPudNzy"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="utilidade-casa">
+          <img src="rodo.jpg" alt="Rodo" />
+          <h3>Rodo de Silicone</h3>
+          <p>Para Limpeza de Piso Vidros Com Gancho Secos e Molhados Uso Duplo Vassoura Mágica.</p>
+          <a href="https://s.shopee.com.br/9pR132rJOH"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="eletronicos">
+          <img src="fone.jpg" alt="Fone JBL" />
+          <h3>Fone De Ouvido Sem Fio JBL</h3>
+          <p>Tune 230NC Bluetooth 5.2 TWS Estéreo À Prova D'água Com Microfone.</p>
+          <a href="https://s.shopee.com.br/x5UlGnv6"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="acessorios-femininos">
+          <img src="bolsa.jpg" alt="Bolsa" />
+          <h3>Bolsa Feminina Transversal</h3>
+          <p>corrente escura "Y".</p>
+          <a href="https://s.shopee.com.br/9zkUfY8noU"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="acessorios-femininos">
+            <img src="oculos.jpg" alt="Óculos" />
+            <h3>Óculos De Sol Para Mulheres</h3>
+            <p>Nova Moda Sem Aro Gradiente Lady Vintage Classic Fashion Eyewear.</p>
+            <a href="https://s.shopee.com.br/7AQJKVrWSr"><button class="btn">Link</button></a>
+          </article>
+
+          <article class="content-card" data-category="acessorios-femininos">
+            <img src="Smartwatch Apple Watch.jpg" alt="Smartwatch Apple Watch" />
+            <h3> Smartwatch Apple Watch </h3>
+            <p>Series 9 Com Pulseira Extra monitor De Freqüência Cardíaca Para Homens E Mulheres O Mostrador.</p>
+            <a href="https://s.shopee.com.br/9UoGgvbvKX"><button class="btn">Link</button></a>
+          </article>
+
+          <article class="content-card" data-category="acessorios-femininos">
+            <img src="tiara.jpg" alt="Tiara com Presilha" />
+            <h3>KIT 2 UN Tiara com Presilha</h3>
+            <p>p/ penteados de cabelo fashion moda TIK TOK.</p>
+            <a href="https://s.shopee.com.br/6AXsFBsPhQ"><button class="btn">Link</button></a>
+          </article>
+
+          <article class="content-card" data-category="roupas-femininas">
+            <img src="shorts.jpg" alt="shorts" />
+            <h3>Short Feminino</h3>
+            <p>Alfaiataria Social com Cinto.</p>
+            <a href="https://s.shopee.com.br/8Uvgri6RqS"><button class="btn">Link</button></a>
+          </article>
+
+          <article class="content-card" data-category="roupas-femininas">
+            <img src="colete.jpg" alt="colete" />
+            <h3>Colete curto</h3>
+            <p>alfaiataria feminino.</p>
+            <a href="https://s.shopee.com.br/VtPMuXEcT"><button class="btn">Link</button></a>
+          </article>
+          
+          <article class="content-card" data-category="roupas-femininas">
+            <img src="calsinha.jpg" alt="calsinha" />
+            <h3> Kit 5 peças calcinha modeladora</h3>
+            <p>cintura alta fio duplo cos alto conforto.</p>
+            <a href="https://s.shopee.com.br/9UoDvbYb8U"><button class="btn">Link</button></a>
+          </article>
+
+          <article class="content-card" data-category="art-masculino">
+            <img src="calça.jpg" alt="calça" />
+            <h3>kit 3 calças jeans </h3>
+            <p>masculina skinny com elastano linha premium promoção NF.</p>
+            <a href="https://s.shopee.com.br/7zzUwHiAMW"><button class="btn">Link</button></a>
+          </article>
+
+        <article class="content-card" data-category="art-masculino">
+            <img src="meias.jpg" alt="Meias" />
+            <h3>Kit 18 Pares de Meias</h3>
+            <p>Soquete Cano Curto Masculina Feminina Unissex varejo.</p>
+            <a href="https://s.shopee.com.br/8fF6ztyl5X"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="utilidade-casa">
+            <img src="copo dimond.jpg" alt="copo" />
+            <h3>-Jogo Com 6 Copos </h3>
+            <p>Diamond Borda Dourada ou Transparente 350ml.</p>
+            <a href="https://s.shopee.com.br/2LLA6Vg70A"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="utilidade-casa">
+            <img src="garrafa termica.jpg" alt="garrafa" />
+            <h3>Garrafa Térmica de Café</h3>
+            <p>aradore Chic - Preta e Dourada 1L.</p>
+            <a href="https://s.shopee.com.br/gCsAJARlN"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="utilidade-casa">
+            <img src="airfrey.jpg" alt="" />
+            <h3>Mini Máquina de Assar Bolo Elétrica</h3>
+            <p>Antiaderente Quiche/De Forno/Eggette Maker Mini Ferro 110V.</p>
+            <a href="https://s.shopee.com.br/VtYPTXXXf"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="utilidade-casa">
+            <img src="airfreyy.jpg" alt="airfrey" />
+            <h3>Air Fryer Fritadeira Elétrica </h3>
+            <p>10L 110V/220V Com Grelha E Cesto Removível Digital Sem Óleo.</p>
+            <a href="https://s.shopee.com.br/7zzZLYO7C6"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="utilidade-casa">
+            <img src="copo ambar.jpg" alt="" />
+            <h3>ogo de Copos Diamond Âmba</h3>
+            <p>280ml Vidro.</p>
+            <a href="https://s.shopee.com.br/7fMjJ3d4Cq"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="utilidade-casa">
+            <img src="kit 12.jpg" alt="kit" />
+            <h3>Jogo Kit C/12 Peças Utensílios De Cozinha </h3>
+            <p>Colheres Espatula Silicone Cabo Madeira Com Balde Decoração.</p>
+            <a href="https://s.shopee.com.br/6AXvnAvoup"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="utilidade-casa">
+            <img src="brinox.jpg" alt="panela" />
+            <h3>Jogo de Panelas Brinox</h3>
+            <p>Antiaderente Ceramic Life - Marble Blend com Indução - Cinza Claro.</p>
+            <a href="https://s.shopee.com.br/gCz14JsMN"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="utilidade-casa">
+            <img src="vanilla.jpg" alt="panela" />
+            <h3>Conjunto de Panelas Vanilla 10 Peças Premium </h3>
+            <p>Revestimento Cerâmico Indução Antiaderente Mimo Style.</p>
+            <a href="https://s.shopee.com.br/8KcQNhR6hE"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="utilidade-casa">
+            <img src="cestos.jpg" alt="cestos" />
+            <h3>Conjunto 3 Cestos </h3>
+            <p>Organizadores Bambu.</p>
+            <a href="https://s.shopee.com.br/8pYglJfgFt"><button class="btn">Link</button></a>
+        </article>
+
+       
+
+        <article class="content-card" data-category="perfumaria">
+            <img src="perfume asad.jpg" alt="perfume " />
+            <h3>Perfume Lattafa Asad Eau</h3>
+            <p>de Parfum Masculino Original 100ml.</p>
+            <a href="https://s.shopee.com.br/8fFDAeUrsL"><button class="btn">Link</button></a>
+        </article>
+
+
+        <article class="content-card" data-category="cobertores">
+            <img src="trançada.jpg" alt="cobertores" />
+            <h3>Peseira ou manta P/ Cama casal</h3>
+            <p> Trançada Nó Escandinavo 2 metros.</p>
+            <a href="https://s.shopee.com.br/1B9FboDY0c"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="cobertores">
+            <img src="fronha.jpg" alt="fronha" />
+            <h3>Capa Para Colchão Com Fronhas</h3>
+            <p> Impermeavel Matelado Com Elastico.</p>
+            <a href="https://s.shopee.com.br/BGh0joqPc"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="moveis">
+            <img src="Poltrona Cama Hermes Luxo .jpg" alt="Poltrona" />
+            <h3>Poltrona Cama Hermes Luxo </h3>
+            <p>Castellar Móbile.</p>
+            <a href="https://s.shopee.com.br/3VX9zOpY61"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="moveis">
+            <img src="Báu Banco Recamier Calçadeira .jpg" alt="Baú" />
+            <h3>Báu Banco Recamier Calçadeira </h3>
+            <p>Capitonê Para Cama Casal ou Queen Dubai - LH Móveis-.</p>
+            <a href="https://s.shopee.com.br/6pnbxspyGE"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="moveis">
+            <img src="KIT Cadeira de balanço.jpg" alt="KIT Cadeira de balanço" />
+            <h3>KIT Cadeira de balanço</h3>
+            <p>+ Assento + Corda Balanço Suspensa Banco decoração infantil jardim.</p>
+            <a href="https://s.shopee.com.br/6fUC8lhlFC"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="moveis">
+            <img src="Poltrona Suede Pés.jpg" alt="Poltrona" />
+            <h3>Poltrona Suede Pés</h3>
+            <p>Palitos Para Amamentação Visammer.</p>
+            <a href="https://s.shopee.com.br/6fUC8lhlFC"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="moveis">
+            <img src="Banco Pufe Baú Decorativ.jpg" alt="Banco" />
+            <h3>Banco Pufe Baú Decorativo</h3>
+            <p> E Mesa De Centro Texas Retangular 60x40 Cm.</p>
+            <a href="https://s.shopee.com.br/4VPjA5FY0p"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="moveis">
+            <img src="Mesa de Cabeceira 45CM.jpg" alt="" />
+            <h3>Mesa de Cabeceira 45CM</h3>
+            <p> Eros Pés em Ferro Dourado Quarto Decor Moderno e Luxuoso.</p>
+            <a href="https://s.shopee.com.br/1g5Xnb3ghZ"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="moveis">
+            <img src="Estante Livreiro Estilo Industrial.jpg" alt="" />
+            <h3>Estante Livreiro Estilo Industrial</h3>
+            <p>MDP Escritorio Prateleira Livros Sala Cozinha Decoração Ambientes Preto/Nature.</p>
+            <a href="https://s.shopee.com.br/40TSavUcJr"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="decoracao">
+            <img src="Calendário de Mesa Permanete .jpg" alt="calendario" />
+            <h3>Calendário de Mesa Permanete</h3>
+            <p> Decorativo com Plaquinhas Casa Escritório.</p>
+            <a href="https://s.shopee.com.br/60EVNirIFX"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="decoracao">
+            <img src="Prateleira Organizadora De Cosméticos.jpg" alt="" />
+            <h3>Prateleira Organizadora De Cosméticos</h3>
+            <p> De Maquiagem Prateleiras De Armazenamento Para Banheiro Cuidados Com A Pele De Mesa.</p>
+            <a href="https://s.shopee.com.br/5KyoaEIMky"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="decoracao">
+            <img src="Trio Vasos Modernos Decorativos.jpg" alt="" />
+            <h3>Trio Vasos Modernos Decorativos</h3>
+            <p> Para Flores Decoração Para Mesas  - Criativa Plasticos.</p>
+            <a href="https://s.shopee.com.br/9KUxJMAPxR"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="decoracao">
+            <img src="Espelho Decorativo Oval.jpg" alt="" />
+            <h3>Espelho Decorativo Oval</h3>
+            <p>Corpo Inteiro Luxo com Moldura Couro.</p>
+            <a href="https://s.shopee.com.br/5KyoZCmY8h"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="decoracao">
+            <img src="Luminária De Mesa Retrati.jpg" alt="" />
+            <h3>Luminária De Mesa Retratil</h3>
+            <p>Wood Com Base De Madeira .</p>
+            <a href="https://s.shopee.com.br/3VXAPFxeF5"><button class="btn">Link</button></a>
+        </article>
+
+
+
+
+
+
+
+
+        <article class="content-card" data-category="eletronicos">
+            <img src="galaxy.jpg" alt="celular" />
+            <h3> Smartphone Samsung Galaxy A06</h3>
+            <p>128GB 4GB RAM 6,7" Branco.</p>
+            <a href="https://s.shopee.com.br/7V3EIhknHm"><button class="btn">Link</button></a>
+          </article>
+
+          <article class="content-card" data-category="eletronicos">
+            <img src="cooler.jpg" alt="cooler" />
+            <h3> cooler</h3>
+            <p>Para nootebok.</p>
+            <a href="https://s.shopee.com.br/30ajrNlwEW"><button class="btn">Link</button></a>
+          </article>
+
+        <article class="content-card" data-category="calcados">
+          <img src="tenis.jpg" alt="Tênis" />
+          <h3>Tênis Casual Feminino</h3>
+          <p>Confortável, com design moderno e solado macio.</p>
+          <a href="#"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="perfumaria">
+          <img src="perfume.jpg" alt="Perfume" />
+          <h3>FKIT lili creme e perfume</h3>
+          <p>350ml acetinado corpo e mãos hidratante lily lulli.</p>
+          <a href="https://s.shopee.com.br/2LL0Qc1UrY"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="art-masculino">
+          <img src="barbiador.jpg" alt="Aparador" />
+          <h3>Aparador de Pelos Britânia</h3>
+          <p>6 em 1 BAPE01 Multigroom.</p>
+          <a href="https://s.shopee.com.br/2LL0Qc1UrY"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="decoracao">
+          <img src="7.jpg" alt="Lençol" />
+          <h3>Jogo de Lençol</h3>
+          <p>03 Peças 400 Fios Cama Casal Queen Micropercal Ponto Palito.</p>
+          <a href="https://s.shopee.com.br/7pfyGkrJKk"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="roupas-femininas">
+          <img src="8.jpg" alt="Calça ZARA" />
+          <h3>Calça Social Feminina</h3>
+          <p>ZARA Pantalona Alfaiataria Com Cinto Lançamento Moda Zr Luxo Elegância Social.</p>
+          <a href="https://s.shopee.com.br/3LDYyLQI7G"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="cobertores">
+          <img src="capa.jpg" alt="Capa" />
+          <h3>Capa Protetora Matelada</h3>
+          <p>SOLTEIRO / CASAL / QUEEN / KING / CAPA TRAVESSEIRO Impermeável ULTRA-SÔNICA ANTI-ODOR Para Colchão.</p>
+          <a href="https://s.shopee.com.br/8fFGSqyAAR"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="cosmeticos">
+          <img src="batom.jpg" alt="Batom" />
+          <h3>Kit de Batons Matte</h3>
+          <p>Alta fixação, cores vibrantes e acabamento aveludado.</p>
+          <a href="#"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="escolar">
+          <img src="mochila.jpg" alt="Mochila" />
+          <h3>Mochila Escolar Infantil</h3>
+          <p>Com rodinhas, compartimentos e design divertido.</p>
+          <a href="#"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="pecas-intimas-femininas">
+          <img src="lingerie.jpg" alt="Lingerie" />
+          <h3>Conjunto Lingerie Renda</h3>
+          <p>Sutiã e calcinha com detalhes delicados, super confortável.</p>
+          <a href="#"><button class="btn">Link</button></a>
+        </article>
+
+        <article class="content-card" data-category="salao-de-beleza">
+          <img src="secador.jpg" alt="Secador" />
+          <h3>Secador de Cabelo Profissional</h3>
+          <p>2000W com tecnologia íon e bocal difusor incluso.</p>
+          <a href="#"><button class="btn">Link</button></a>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Achadinhos Imperdíveis</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchInput = document.getElementById("search-input");
+      const categoryButtons = document.querySelectorAll(".category-btn");
+      const cards = document.querySelectorAll(".content-card");
+
+      searchInput.addEventListener("input", function () {
+        const searchTerm = searchInput.value.toLowerCase();
+        cards.forEach(card => {
+          const title = card.querySelector("h3").textContent.toLowerCase();
+          const description = card.querySelector("p").textContent.toLowerCase();
+          card.style.display = (title.includes(searchTerm) || description.includes(searchTerm)) ? "block" : "none";
+        });
+      });
+
+      categoryButtons.forEach(button => {
+        button.addEventListener("click", function () {
+          const category = this.getAttribute("data-category");
+          cards.forEach(card => {
+            const cardCategory = card.getAttribute("data-category");
+            card.style.display = (category === "todos" || cardCategory === category) ? "block" : "none";
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

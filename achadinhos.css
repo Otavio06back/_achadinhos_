@@ -1,0 +1,396 @@
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: #9fb0c1;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Header */
+header {
+    background-color: #ee4d2d;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #ecf0f1;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    font-weight: bold;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    border-bottom-color: white;
+}
+
+/* Página Inicial */
+.intro {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.mythology-options {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.mythology-card {
+    width: 48%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s;
+}
+
+.mythology-card:hover {
+    transform: translateY(-5px);
+}
+
+.mythology-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.card-content p {
+    margin-bottom: 20px;
+    color: #7f8c8d;
+}
+
+.newsletter {
+    text-align: center;
+    padding: 40px 0;
+    background: white;
+    border-radius: 8px;
+    margin: 40px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.newsletter h2 {
+    margin-bottom: 20px;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 300px;
+    max-width: 100%;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Páginas de Mitologia */
+.mythology-intro {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.mythology-intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.content-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+}
+
+.content-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.content-card h3 {
+    padding: 0 20px;
+    margin: 15px 0 10px;
+}
+
+.content-card p {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    color: #7f8c8d;
+}
+
+.content-card .btn {
+    margin: 0 20px 20px;
+}
+
+.quiz-section, .search-section {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 40px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.quiz-section h2, .search-section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#quiz {
+    margin-bottom: 20px;
+}
+
+.question {
+    margin-bottom: 15px;
+}
+
+.question h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.answers {
+    margin-left: 20px;
+}
+
+.answer {
+    margin-bottom: 5px;
+}
+
+#results {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    padding: 10px;
+    width: 300px;
+    max-width: 100%;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#search-results {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #ee4d2d;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #ecf0f1;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    position: relative;
+    animation: modalopen 0.5s;
+}
+
+@keyframes modalopen {
+    from {opacity: 0; transform: translateY(-50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .mythology-options {
+        flex-direction: column;
+    }
+
+    .mythology-card {
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .newsletter input {
+        margin-bottom: 10px;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .newsletter form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 20% auto;
+    }
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .sidebar {
+    background-color: #1f1f1f;
+  }
+  
+  body.dark-mode .category-btn {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .category-btn:hover {
+    background-color: #555;
+  }
+  
+  body.dark-mode .content-card {
+    background-color: #1e1e1e;
+    border-color: #444;
+  }
+  
+  body.dark-mode .btn {
+    background-color: #28a745;
+  }
+  
+  body.dark-mode input#search-input {
+    background-color: #333;
+    color: #f0f0f0;
+    border-color: #555;
+  }
+  
